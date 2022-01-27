@@ -1,0 +1,20 @@
+  <!-- walk thru the members - render one by one in the do block  -->
+  <!-- each member is a map - render the name and id fields and a link  -->
+  <!-- the link comes from a helper function  -->
+  <!-- Phoenix.HTML.Link  -->
+  <!-- execute the code in left arrow percent equal...percent rite arrow  -->
+  <!-- inject the result into the template at the same spot  -->
+  <!-- evalute the code in left arrow percent...percent rite arrow ( no =) -->
+  <!-- use it for side effect, I don't like side effects  -->
+
+
+<h1>Listing Member</h1>
+
+<table>
+  <%= for member <- @members do %>
+    <tr>
+      <td><%= render "member.html", member: @member %></td>
+      <td><%= link "View", to: Routes.member_path(@conn, :show, member.id) %></td>
+    </tr>
+  <% end %>
+</table>

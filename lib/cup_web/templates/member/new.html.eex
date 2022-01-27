@@ -1,0 +1,50 @@
+<h1>New Member</h1>
+
+<%= form_for @changeset, Routes.member_path(@conn, :create), fn f -> %>
+  <div>
+    <%= text_input f, :firstname, placeholder: "First Name" %>
+  </div>
+
+  <div>
+    <%= text_input f, :lastname, placeholder: "Last Name" %>
+  </div>
+
+  <div>
+    <%= text_input f, :spousename, placeholder: "Spouse Name" %>
+  </div>
+  
+  <div>
+    <%= text_input f, :streetaddress, placeholder: "Street Address" %>
+  </div>
+  
+  <div>
+    <%= text_input f, :city, placeholder: "City" %>
+  </div>
+  
+  <div>
+    <%= text_input f, :state, placeholder: "State" %>
+  </div>
+  
+  <div>
+    <%= text_input f, :zipcode, placeholder: "Zipcode" %>
+  </div>
+  
+  <div>
+    <%= text_input f, :phoneone, placeholder: "Phone One" %>
+  </div>
+  
+  <div>
+    <%= text_input f, :phonetwo, placeholder: "Phone Two" %>
+  </div>
+  
+  <div>
+    <%= text_input f, :membername, placeholder: "Username" %>
+  </div>
+
+  <div>
+    <%= password_input f, :password, placeholder: "Password" %>
+    <%= error_tag f, :password %>
+</div>
+
+  <%= submit "Create User" %>
+<% end %>

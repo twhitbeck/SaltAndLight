@@ -1,0 +1,4 @@
+<strong><%= first_name(@member) %></strong> (<%= @member.id %>)
+<!-- pages or fragments -->
+<!-- allow static markup and/or native code  -->
+<!-- to build response pages  -->
